@@ -2,7 +2,7 @@
 
 import { WagmiConfig, createConfig } from "wagmi";
 import { ConnectKitProvider, ConnectKitButton, getDefaultConfig } from "connectkit";
-
+import MyComponent from "./MyComponent";
 const config = createConfig(
   getDefaultConfig({
     // Required API Keys
@@ -24,6 +24,7 @@ const App = () => {
     <WagmiConfig config={config}>
       <ConnectKitProvider>
         Your App
+        <MyComponent />
         <ConnectKitButton />
       </ConnectKitProvider>
     </WagmiConfig>
